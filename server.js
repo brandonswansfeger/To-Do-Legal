@@ -30,7 +30,10 @@ app.use(methodOverride('_method')); // _method is a query param that accepts a v
 // that value is the http method we want to change to
 
 // Mount Routes
-
+// Mount Routes
+app.get("/", (req, res) => {
+    res.redirect('/tasks');
+});
 app.get('/tasks/seed', async (req, res) => {
     await Task.deleteMany({});
     await Task.create(seedData);
