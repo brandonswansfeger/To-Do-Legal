@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>To Do List App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+       
+
+
+        html {
+            color: #0f2729;
+        }
+
+        main {
+            margin-left: 0;
+            margin-right: 2%;
+        }
+
+
+        input:not(:placeholder-shown) {
+            background-color: #6fb3b8 !important;
+        }
+
+
+        input:placeholder-shown {
+            background-color: #0f2729 !important;
+        }
+
+        body {
+            background-color: #0f2729;
+            font-family: Lato;
+        }
+
+        
+        input {
+            background-color: #0f2729;
+            margin: 2px;
+            color: #388087;
+            padding: 20px;
+        }
+
+        .form-row {
+            width: span;
+        }
+
+        p {
+            font-size: auto;
+            margin-left: 2px;
+            margin-right: 2px
+        }
+
+        
+
+
+            t3 {
+                /* font-size:  */
+                color: #6fb3b8;
+            }
+
+            #notes {
+                width: 60%;
+
+            }
+
+            #date {
+                width: 30%;
+                color:
+            }
+/* 
+        
+                display: flex;
+
+
+  
+        */
+    </style>
+</head>
+
+<body>
+    <main id="site-main">
+        <div class="container">
+            <main class="box-nav-d-flex-justify-between" style="padding: 20px">
+
+                <form action="/tasks/<%= task._id %>?_method=PUT" method="POST"
+                    onsubmit="setTimeout(function(){window.location.replace('/tasks');},10);">
+
+
+                    <div class="form-row">
+                        <input type="text" name="matter" value="<%=task.matter%>" class="form-control form-control-sm"
+                            id="case" placeholder="Case / Matter">
+                        <input type="hidden" name="id" value="<%= task._id %>">
+                        <input type="text" name="task" value="<%= task.task %>" class="form-control form-control-sm"
+                            id="task" placeholder="Task">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="notes" value="<%= task.notes %>" class="form-control form-control-sm"
+                            id="notes" placeholder="Notes">
+                    </div>
+                    <div class="form-row">
+                        <div class="deadline">
+                            <p>Deadline</p>
+                            <input type="date" name="deadline" value="<%= task.deadline %>"
+                                class="form-control form-control-sm" id="date" style="width:20%" placeholder="Deadline">
+                        </div>
+                        <div class="prior">
+                            <p style="color:#6fb3b8; justify-content: end">Priority:</p>
+                            <select style="width:20%"
+                                class="form-control form-control-sm" name="priority" value="<%= task.priority %>">
+                                <option> - </option>
+                                <option>HIGH</option>
+                                <option>medium</option>
+                            </select>
+                        </div>
+                        <div class="complete">
+                            Completed: <input type="checkbox" style="size: large" name="completed" <% if(task.completed
+          === true){%> checked <%}%> />
+                            </div>
+        </div>
+
+        C
+        <button type="submit" onsubmit="setTimeout(function(){window.location.replace("/tasks");},10);>Update
+            task</button> </form> <a href="http://localhost:3000/">To Do List</a>
+    </main>
+    <script>
+        function redirect() {
+            setTimeout(function () {
+                window.location.replace("/tasks");
+            }, 5000)
+
+
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

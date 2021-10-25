@@ -1,0 +1,120 @@
+nav {
+    background-color: #0f2729;
+    justify-content: center;
+    align-self: center;
+    font-size: 18px;
+}
+
+thead {
+background-color: transparent;
+
+}
+
+html{
+color: #0f2729;
+}
+
+main{
+    margin-left: 0;
+    margin-right: 2%; 
+}
+
+
+input:not(:placeholder-shown) {
+    background-color:  #6fb3b8!important;
+ }
+ 
+ 
+ input:placeholder-shown {
+    background-color:  #0f2729 !important;
+ }
+
+body {
+    background-color: #0f2729;
+    font-family: Lato;
+}
+
+table {
+    margin-right: auto;
+    color: #388087 !important;
+    
+}
+
+input {
+    background-color: #0f2729;
+    margin: 2px;
+    color:#388087;
+}
+
+.form-row {
+    display: flex;
+}
+
+p {
+    font-size: auto;
+    margin-left: 2px;
+    margin-right: 2px
+}
+
+#t2 {
+   /* background-color: #c2edce; */
+   /* color: #6fb3b8; */
+}
+
+.row-3 {
+    display: flex;
+}
+
+tr {
+    border-bottom: solid #388087 .4px;
+}
+
+table {
+width: auto;
+margin: 10px;
+justify-self: center;
+border-color: transparent;
+color:#388087;
+
+}
+
+t3 {
+    /* font-size:  */
+    color: #6fb3b8;
+}
+
+#notes{
+width: 60%;
+
+}
+
+#date {
+    width: 30%;
+    color: 
+}
+
+#addtaskbtn {
+margin: 3px;
+borde: solid #388087 !important;
+justify-items: center !important;
+background-color: #c2edce;
+color: #388087;
+margin-left: 15%;
+
+
+}
+
+td {
+    font-size: auto;
+    /* color:#6fb3b8; */
+    
+}
+
+th {
+    font-size: auto;
+}
+/* #row-3 {
+    display: flex;
+    width: span;
+    justify-self: center;
+} */

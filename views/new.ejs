@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <h1 style="align-self: center; color: #f6f6f2; text-justify: center">To Do List</h1>
+    </nav>
+    <Main id=" site-main">
+
+        <div class="container">
+            <form action="/tasks" method="POST">
+                <div class="form-row">
+                    <input type="text" name="case" value="" style="background-color: #ffffff;"
+                        class="form-control form-control-sm" id="case" placeholder="Case / Matter">
+                    <input type="text" name="task" value="" class="form-control form-control-sm" id="task"
+                        placeholder="Task">
+                </div>
+                <div class="form-row">
+                    <input type="text" name="notes" value="" class="form-control form-control-sm" id="notes"
+                        placeholder="Notes">
+                    <p>Deadline</p>
+                    <input type="date" id="date" name="deadline" value="" class="form-control form-control-sm" id="date"
+                        placeholder="Deadline">
+                    <p>Priority</p>
+                    <select style="width: 200px" class="form-control form-control-sm" placeholder="Priority"
+                        name="priority" value="">
+                        <option></option>
+                        <option>HIGH</option>
+                        <option>medium</option>
+                    </select>
+                </div>
+                <div class="form-row" id="row3">
+                    <input type="submit" name="" value="Add Task" />
+                </div>
+            </form>

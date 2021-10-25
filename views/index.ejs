@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>To Do List App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        nav {
+            background-color: #0f2729;
+            justify-content: center;
+            align-self: center;
+            font-size: 18px;
+        }
+
+        thead {
+            background-color: transparent;
+
+        }
+
+        html {
+            color: #0f2729;
+        }
+
+        main {
+            margin-left: 0;
+            margin-right: 2%;
+        }
+
+        select:not(:placeholder-shown) {
+    background-color: #0f2729 !important;
+    color:#6fb3b8;
+        }
+        select:placeholder-shown {
+    background-color:#0f2729 !important;
+    color:#6fb3b8;
+        }
+
+hmtl{
+    color:#6fb3b8;
+}
+
+    input:not(:placeholder-shown) {
+    /* background-color: #6fb3b8 !important; */
+    color:#388087;
+        }
+
+
+    input:placeholder-shown {
+            background-color: #0f2729 !important;
+            color:#6fb3b8 !important;
+        }
+
+        body {
+            background-color: #0f2729;
+            font-family: Lato;
+        }
+
+        table {
+            margin-right: auto;
+            color: #388087 !important;
+
+        }
+
+        input {
+            background-color: #0f2729;
+            margin: 2px;
+            color: #388087;
+        }
+
+        .form-row {
+            display: flex;
+        }
+
+        p {
+            font-size: auto;
+            margin-left: 2px;
+            margin-right: 2px
+        }
+
+        #t2 {
+            /* background-color: #c2edce; */
+            /* color: #6fb3b8; */
+        }
+
+        .row-3 {
+            display: flex;
+        }
+        option {
+            color:#6fb3b8
+        }
+           
+        )
+
+        tr {
+            border-bottom: solid #388087 .4px;
+        }
+
+        table {
+            width: auto;
+            margin: 10px;
+            justify-self: center;
+            border-color: transparent;
+            color: #388087;
+
+        }
+
+        t3 {
+            /* font-size:  */
+            color: #6fb3b8;
+        }
+
+        #notes {
+            width: 60%;
+
+        }
+
+        #date {
+            width: 30%;
+            color:
+        }
+
+        #addtaskbtn {
+            margin: 3px;
+            borde: solid #388087 !important;
+            justify-items: center !important;
+            background-color: #c2edce;
+            color: #388087;
+            margin-left: 15%;
+
+
+        }
+
+        td {
+            font-size: auto;
+            /* color:#6fb3b8; */
+
+        }
+
+        input[type=checkbox] {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(1.5);
+            /* IE */
+            -moz-transform: scale(1.5);
+            /* FF */
+            -webkit-transform: scale(1.5);
+            /* Safari and Chrome */
+            -o-transform: scale(1.5);
+            /* Opera */
+            padding: 10px;
+            color: green !important;
+        }
+
+        th {
+            font-size: auto;
+        }
+
+#none {
+    display: none;
+}
+
+
+.onhoverfb{
+    order: reverse;
+    visibility: hidden;
+    text-align-last: auto;
+    overflow: hidden;
+    position: absolute;
+}
+i {
+    justify-items: end;
+    size: large;
+}
+#checkBox {
+    display: flex;
+flex-direction: row;
+}
+
+#hoverText:hover ~ .onhoverfb{
+    position: relative;
+    float: right;
+    visibility: visible;
+    background-color: black;
+    align-items: flex-end;
+    overflow: visible;
+    font-size: small;
+}
+.form-control-sm {
+background-color: #0f2729;
+}
+
+input {
+    background-color: #0f2729;
+    color:#388087;
+}
+
+        /* #row-3 {
+    display: flex;
+    width: span;
+    justify-self: center;
+} */
+    </style>
+
+
+</head>
+
+<body>
+    <nav>
+        <h1 style="align-self: center; color: #f6f6f2; text-justify: center">To Do List</h1>
+    </nav>
+    <Main id=" site-main">
+
+        <div class="container">
+            <form action="/tasks" method="POST">
+                <div class="form-row">
+                    <input type="text" name="matter" value="" style="background-color: #ffffff;"
+                        class="form-control form-control-sm" id="case" placeholder="Case / Matter">
+                    <input type="text" name="task" value="" class="form-control form-control-sm" id="task"
+                        placeholder="Task">
+                </div>
+                <div class="form-row">
+                    <input type="text" name="notes" value="" class="form-control form-control-sm" id="notes"
+                        placeholder="Notes">
+                    <p style="color:#c4caca">Deadline</p>
+                    <input style="background-color:#0f2729" type="date" id="date" name="deadline" value="" class="form-control form-control-sm" id="date"
+                        placeholder="Deadline">
+                    <p style="color:#c4caca">Priority</p>
+                    <select style="width: 200px; background-color: #0f2729;" class="form-control form-control-sm" placeholder="Priority"
+                        name="priority" value="">
+                        <option> - </option>
+                        <option>HIGH</option>
+                        <option>medium</option>
+                    </select>
+                </div>
+                <div class="form-row" id="row3">
+                    <button style="width: 700px" style="align-items: center" ; center" id="addtaskbtn"
+                        onsubmit="setTimeout(function(){window.location.reload();},5);">Add Task</button>
+                </div>
+            </form>
+
+
+            <form action="" method="POST">
+                <table class="table table-sm" id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 5%"></th>
+                            <th style="width: 8%" scope="col">Priority</th>
+                            <th style="width: 15%" scope="col">Matter</th>
+                            <th style="width: 35%" scope="col">Task</th>
+                            <th style="width: 25%" scope="col">Notes</th>
+                            <th style="width: 10%" scope="col">Deadline</th>
+                            <th style="width: 2%" scope="col"></th>
+                            <th style="width: 2%" scope="col"></th>
+                            <th style="width: 2%" scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0;i<tasks.length;i++){%>
+
+                        <tr>
+                            <th style="width: 2%" id="Checkbox" class="align-middle" scope="row">
+                            <input type="checkbox" id='hoverText' name="completed" <% if(tasks[i].completed
+                                === true){ %> checked <% } %> />
+                                <span class="onhoverfb bi bi-pencil-fill" style="color:orange; padding: 2px"> click edit icon to change status</span>
+                             </th>
+                            <td style="font-weight: 900" class="priority" style="width: 8%"> <%= tasks[i].priority %>
+                            </td>
+                            <td style="width: 15%" class="font=weight-bold"><%= tasks[i].matter %></td>
+                            <td id='t2' style="font-weight: 900""width: 35%"><%= tasks[i].task %></td>
+                            <td style="width: 25%"><%= tasks[i].notes %></td>
+                            <td id='t3' style="font-weight: 900; font-size: small" style="width: 10%">
+                                <%= tasks[i].deadline %></td>
+                            <td style="width: 2%; justify-items: end">
+                                <a id="updateTask" href="/tasks/<%= tasks[i]._id%>/edit"><i class="bi bi-pencil-fill"
+                                        style="color:orange"></i></a>
+                            </td>
+                            <td>
+                                <form action="/tasks/<%= tasks[i]._id%>?_method=DELETE" method="POST">
+                                    <button type="submit" style="background-color:transparent; border:none"><i
+                                            type='submit' class='bi bi-x-lg' style="color:red"></i></button>
+                                </form>
+
+
+                        </tr>
+                        <%}%>
+
+
+                </tbody>
+
+            </table>
+        </form>
+    </div>
+</main> 
+
+
+<script>
+
+<% for(var i=0;i<tasks.length;i++){%>
+
+function watcher() {
+  var checkboxElements = document.getElementsByClassName("#checkbox");
+
+   checkboxElements.addEventListener('change', function() {
+      if (this.checked) {
+        this.closest('tr').style.textDecoration = 'line-through';
+      }
+    });
+  }
+}
+
+watcher();
+
+<%}%>
+
+</script>
+</body>
+</html>
