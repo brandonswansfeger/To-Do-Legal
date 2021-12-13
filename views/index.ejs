@@ -280,7 +280,7 @@
 
                         <tr>
                             <td>
-                                <input type="checkbox" action="/tasks" method="POST" onchange="submit()" name="completed" <% if(tasks[i].completed
+                                <input type="checkbox" action="/tasks/<%= task._id %>?_method=PUT" method="POST" onchange="submit()" name="completed" <% if(tasks[i].completed
                                 === true){ %> checked <% } %> />
 
                             </td>
