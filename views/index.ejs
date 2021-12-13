@@ -280,7 +280,7 @@
 
                         <tr>
                             <td>
-                                <input type="checkbox" onclick="boldText(this,'lineOne') name="completed" <% if(tasks[i].completed
+                                <input type="checkbox" onchange="this.form.submit()" name="completed" <% if(tasks[i].completed
                                 === true){ %> checked <% } %> />
 
                             </td>
